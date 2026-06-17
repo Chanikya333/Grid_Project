@@ -1,54 +1,74 @@
-/* *{
-    border:2px solid red;
+/* * {
+  border: 2px solid red;
 } */
- body{
-    
-    margin:0 auto;
-    background-color: aliceblue;
-    max-width: 95%;
+body {
+  margin: 0 auto;
+  font-family: Poppins, sans-serif;
+  background-color: aliceblue;
+  max-width: 95%;
+}
+header {
+  margin: 20px 40px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+header > h1 {
+  font-size: 28px;
+}
+header > p {
+  background-color: white;
+  padding: 10px;
+  text-transform: uppercase;
+  border-radius: 10px;
+  font-size: 12px;
+  font-weight: bold;
+  margin-left: 20px;
+  /* box-shadow: 0px 0px 2px black; */
+  letter-spacing: 0cap;
+}
 
- }
-header{
-    margin:20px 40px;
-    display:flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
+.links {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-left: auto;
+  text-decoration: none;
+  gap: 20px;
+  font-weight: bold;
 }
-header>h1{
-    font-size: 28px;
+.links a {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  cursor: pointer;
+  color: black;
 }
-header>p{
-    background-color: white;
-    padding: 10px;
-    text-transform: uppercase;
-    border-radius: 10px;
-    font-size:12px;
-    font-weight: bold;
-    margin-left:20px ; 
-    /* box-shadow: 0px 0px 2px black; */
-    letter-spacing: 0cap;
+.links a img {
+  max-width: 16px;
+  max-height: 16px;
 }
-
-.links{
-    display:flex;
-    flex-direction: row;
-    align-items: center;
-    margin-left: auto;
-    text-decoration: none;
-    gap:20px;
-    font-weight:bold;
+.container {
+  width: 300px;
+  /* display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 10px;
+  object-fit: contain; */
 }
-.links a{
-    display:flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;
-    cursor: pointer;
-    color: black;
+.container img {
+  max-width: 100%;
+  /* object-fit: contain; */
+  position: relative;
 }
-.links a img{
-    max-width: 16px;
-    max-height:16px;
+.overlay {
+  position: absolute;
+  margin: 0;
+  /* display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold; */
 }
