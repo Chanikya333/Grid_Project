@@ -3,7 +3,7 @@
 } */
 body {
   margin: 0 auto;
-  font-family: Poppins, sans-serif;
+  font-family: "Poppins", sans-serif;
   background-color: aliceblue;
   max-width: 95%;
 }
@@ -53,22 +53,31 @@ header > p {
 }
 .container {
   width: 300px;
-  /* display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(3, 1fr);
-  gap: 10px;
-  object-fit: contain; */
-}
-.container img {
-  max-width: 100%;
-  /* object-fit: contain; */
   position: relative;
 }
-.overlay {
+.container img {
+    width: 100%;
+}
+.container .overlay {
   position: absolute;
-  margin: 0;
-  /* display: flex;
+  margin: 0 auto;
+  top:0;
+  bottom: 0;
+  left:0;
+  right:0;
+  display:flex;
   justify-content: center;
   align-items: center;
-  font-weight: bold; */
+  font-weight: bold;
+  opacity: 0;
+}
+.container .overlay:hover{
+  cursor: pointer;
+  background-color: rgb(255,255,255,0.1);
+  opacity: 1;
+  transition: 0.5s ease;
+}
+.overlay #eth{
+  display: grid;
+  grid-template: ;
 }
