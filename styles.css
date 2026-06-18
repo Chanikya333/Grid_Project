@@ -8,11 +8,14 @@ body {
   max-width: 95%;
 }
 header {
-  margin: 20px 40px;
+  margin: 20px auto;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
+  width:100%;
+  max-width: 90%;
+  position: relative;
 }
 header > h1 {
   font-size: 28px;
@@ -25,8 +28,11 @@ header > p {
   font-size: 12px;
   font-weight: bold;
   margin-left: 20px;
-  /* box-shadow: 0px 0px 2px black; */
   letter-spacing: 0cap;
+}
+
+.hamberger {
+  display: none;
 }
 
 .links {
@@ -54,19 +60,50 @@ header > p {
 main{
   display: grid;
   grid-template-areas: 
-  "eth eth alpha"
-  "eth eth alpha";
+  "eth eth alp"
+  "eth eth tra"
+  "cub ast tra"
+  "cup ins ins"
+  "cup ins ins"
+  "foa foa dim"
+  "foa foa dim";
+  gap:14px;
+  width:100%;
+  max-width: 95%;
+  margin:0 auto;
 }
 #eth{
   grid-area: eth;
-  object-fit: cover;
+}
+#alp{
+  grid-area: alp;
+}
+#tra{
+  grid-area: tra;
+}
+#cub{
+  grid-area: cub;
+}
+#cup{
+  grid-area: cup;
+}
+#ins{
+  grid-area:ins;
+}
+#foa{
+  grid-area: foa;
+}
+#dim{
+  grid-area: dim;
 }
 .container {
-  width: 300px;
+  width: 100%;
   position: relative;
 }
 .container img {
     width: 100%;
+    object-fit: cover;
+    height: 100%;
 }
 .container .overlay {
   position: absolute;
@@ -75,6 +112,8 @@ main{
   bottom: 0;
   left:0;
   right:0;
+  height: 100%;
+  width: 100%;
   display:flex;
   justify-content: center;
   align-items: center;
@@ -87,4 +126,123 @@ main{
   opacity: 1;
   transition: 0.5s ease;
 }
+footer {
+  font-size: 14px;
+  margin: 10px auto;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
+@media only screen and (max-width:600px){
+  main{
+  display: grid;
+  grid-template-areas: 
+  "eth eth"
+  "alp tra"
+  "ast cub"
+  "ins ins"
+  "cup foa"
+  "dim dim";
+  gap:10px;
+  width:100%;
+  max-width: 95%;
+  margin:0 auto;
+  }
+  .container img {
+    width: 100%;
+    object-fit: cover;
+    height: 100%;
+}
+header {
+  margin: 20px auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  width:100%;
+  max-width: 90%;
+}
+header > h1 {
+  font-size: 20px;
+}
+header > p {
+  background-color: white;
+  padding: 8px;
+  text-transform: uppercase;
+  border-radius: 8px;
+  font-size: 10px;
+  font-weight: bold;
+  margin-left: 15px;
+  /* box-shadow: 0px 0px 2px black; */
+  letter-spacing: 0cap;
+}
+
+.links {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-left: auto;
+  text-decoration: none;
+  gap: 15px;
+  font-weight: bold;
+}
+.links a {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  cursor: pointer;
+  color: black;
+}
+.links a img {
+  max-width: 12px;
+  max-height: 12px;
+}
+.hamberger{
+  display: none;
+}
+}
+@media only screen and (max-width:500px){
+  main{
+    display: grid;
+  grid-template-areas: 
+  "eth eth"
+  "alp alp"
+  "tra tra"
+  "ast cub"
+  "ins ins"
+  "cup cup"
+  "foa foa"
+  "dim dim";
+  gap:6px;
+  width:100%;
+  max-width: 99%;
+  margin:0 auto;
+  }
+  header > h1 {
+  font-size: 22px;
+}
+  header .links{
+    display: none;
+  }
+.hamberger{
+  display: block;
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  right: 0;
+  top: 70%;
+  transform: translateY(-45%);
+}
+.hamberger .bar{
+  height: 4px;
+  width: 36px;
+  border-radius: 10px;
+  background-color: black;
+  margin: 3px;
+}
+
+}
